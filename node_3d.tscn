@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxg8iyouaax2g"]
+
+[ext_resource type="PackedScene" uid="uid://dksnhtaedsp7q" path="res://Quake_Player/OldWorld/map.tscn" id="1_noarx"]
+[ext_resource type="PackedScene" uid="uid://bsn6ujr1elki8" path="res://TPS.tscn" id="2_a0tk4"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="map" parent="." instance=ExtResource("1_noarx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0471361, 0, 1.50025)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_a0tk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24584, 0)

@@ -1,0 +1,66 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://ux4t0jksdklq"]
+
+[ext_resource type="Shader" uid="uid://25nvcr2ay5sm" path="res://Quake_Player/Sky.gdshader" id="1_khne7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_srxq3"]
+shader = ExtResource("1_khne7")
+shader_parameter/day_top_color = Color(0, 0.632909, 0.435823, 1)
+shader_parameter/day_bottom_color = Color(1, 1, 1, 1)
+shader_parameter/sunset_top_color = Color(0.135174, 0.000173367, 0.554745, 1)
+shader_parameter/sunset_bottom_color = Color(1, 1, 1, 1)
+shader_parameter/night_top_color = Color(0.02, 0, 0.04, 1)
+shader_parameter/night_bottom_color = Color(0.1, 0, 0.2, 1)
+shader_parameter/horizon_color = Color(8.85606e-06, 0.807668, 0.921929, 1)
+shader_parameter/horizon_blur = 0.05
+shader_parameter/sun_color = Color(10, 8, 1, 1)
+shader_parameter/sun_sunset_color = Color(10, 0, 0, 1)
+shader_parameter/sun_size = 0.2
+shader_parameter/sun_blur = 10.0
+shader_parameter/moon_color = Color(1, 0.95, 0.7, 1)
+shader_parameter/moon_size = 0.06
+shader_parameter/moon_blur = 0.1
+shader_parameter/clouds_edge_color = Color(0.8, 0.8, 0.98, 1)
+shader_parameter/clouds_top_color = Color(1, 1, 1, 1)
+shader_parameter/clouds_middle_color = Color(0.92, 0.92, 0.98, 1)
+shader_parameter/clouds_bottom_color = Color(0.83, 0.83, 0.94, 1)
+shader_parameter/clouds_speed = 2.0
+shader_parameter/clouds_direction = 0.2
+shader_parameter/clouds_scale = 1.0
+shader_parameter/clouds_cutoff = 0.3
+shader_parameter/clouds_fuzziness = 0.5
+shader_parameter/clouds_weight = 0.0
+shader_parameter/clouds_blur = 0.25
+shader_parameter/stars_speed = 1.0
+shader_parameter/overwritten_time = 0.0
+
+[sub_resource type="Sky" id="Sky_ceh42"]
+sky_material = SubResource("ShaderMaterial_srxq3")
+
+[resource]
+background_mode = 2
+background_color = Color(1, 1, 1, 1)
+sky = SubResource("Sky_ceh42")
+ssr_max_steps = 512
+ssr_fade_in = 0.000127522
+ssr_fade_out = 284.05
+ssr_depth_tolerance = 128.0
+ssao_radius = 7.65
+ssao_intensity = 10.0
+ssao_power = 1.78381
+ssao_detail = 1.04
+ssao_horizon = 0.15
+ssao_ao_channel_affect = 1.0
+ssil_radius = 16.0
+ssil_intensity = 0.0
+ssil_sharpness = 1.0
+ssil_normal_rejection = 0.2
+sdfgi_use_occlusion = true
+glow_normalized = true
+glow_bloom = 1.0
+fog_light_color = Color(1, 1, 0.807843, 1)
+fog_light_energy = 0.5
+fog_density = 0.001
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.025
+volumetric_fog_anisotropy = 0.6
